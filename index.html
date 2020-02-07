@@ -61,31 +61,51 @@ And in the moment I knew you, Beth<br>
 </body> 
  
  <script>
-    var sketchProc = function(processingInstance) {
-     with (processingInstance) {
-        size(400, 400); 
-        frameRate(30);
-        
-        // Programmeringskoden skal være her
-	//Ansigtet
-        fill(255, 255, 0);
-        ellipse(200, 200, 200, 200);
-	//Munden
-        noFill();
-        stroke(0, 0, 0);
-        strokeWeight(10);
-        arc(200, 200, 150, 100, 0, PI);
-	//øjnene
-        fill(0, 0, 0);
-        ellipse(250, 175, 10, 10);
-        ellipse(153, 175, 10, 10);
-    }};
 
-    // hent canvasset som Processing-js vil bruge
-    var canvas = document.getElementById("mycanvas"); 
-    // giv funktionen sketchProc (defineret i myCode.js) til Processing's konstruktøren.
-    var processingInstance = new Processing(canvas, sketchProc); 
- </script>
+var sketchProc = function(processingInstance) {
 
+with (processingInstance) {
+
+size(400, 400);
+
+frameRate(30);
+
+// Programmeringskoden skal være her
+
+//Ansigtet
+
+fill(255, 255, 0);
+
+ellipse(200, 200, 200, 200);
+
+//Munden
+
+noFill();
+
+stroke(0, 0, 0);
+
+strokeWeight(10);
+
+arc(200, 200, 150, 100, 0, PI);
+
+//øjnene
+
+fill(0, 0, 0);
+
+ellipse(250, 175, 10, 10);
+
+ellipse(153, 175, 10, 10);
+
+}};
+
+// hent canvasset som Processing-js vil bruge til at tegne på
+
+var canvas = document.getElementById(“mycanvas”);
+
+// giv funktionen sketchProc (defineret i myCode.js) til Processing’s konstruktøren.
+
+var processingInstance = new Processing(canvas, sketchProc);
+
+</script>
 
 </html>
